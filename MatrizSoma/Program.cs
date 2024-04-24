@@ -1,5 +1,5 @@
 ﻿// 2. faça um programa que leia uma matriz quadrada e faça a soma dos valores da linha, da coluna e da diagonal;
-int tamanho = 5, resultadoLinha = 0, resultadoDiagonal1 = 0, resultadoDiagonal2 = 0, resultadoColuna = 0;
+int tamanho = new Random().Next(1, 10), resultadoLinha = 0, resultadoDiagonal1 = 0, resultadoDiagonal2 = 0, resultadoColuna = 0;
 int[,] matriz = new int[tamanho, tamanho];
 int[] matrizLinha = new int[tamanho], matrizColuna = new int[tamanho];
 
@@ -7,7 +7,7 @@ for (int i = 0; i < tamanho; i++)
 {
     for (int j = 0; j < tamanho; j++)
     {
-        matriz[i, j] = new Random().Next(1, 5);
+        matriz[i, j] = new Random().Next(0, 5);
         Console.Write($"{matriz[i, j]}, ");
     }
     Console.WriteLine();
@@ -17,7 +17,6 @@ for (int i = 0; i < tamanho; i++)
 {
     resultadoLinha = 0;
     resultadoColuna = 0;
-
     for (int j = 0; j < tamanho; j++)
     {
         resultadoLinha += matriz[i, j];
