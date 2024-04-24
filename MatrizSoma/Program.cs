@@ -32,17 +32,22 @@ for (int i = 0; i < tamanho; i++)
     {
         if (i == j)
             resultadoDiagonal1 += matriz[i, j];
+        if (((tamanho - 1) - i) + ((tamanho-1) - j) == tamanho-1)
+        {
+            if (i + j == tamanho - 1)
+                resultadoDiagonal2 += matriz[i, j];
+        }
     }
 }
 
-for (int i = tamanho - 1; i > -1; i--)
+/*for (int i = tamanho - 1; i > -1; i--)
 {
     for (int j = tamanho - 1; j > -1; j--)
     {
         if (i + j == tamanho - 1)
             resultadoDiagonal2 += matriz[i, j];
     }
-}
+}*/
 
 for (int i = 0; i < tamanho; i++)
     Console.WriteLine($"linha {i + 1}: {matrizLinha[i]};");
